@@ -58,6 +58,7 @@ func (d *Context) reborn() (child *os.Process, err error) {
 	} else {
 		err = d.child()
 	}
+        os.Unsetenv(MARK_NAME)
 	return
 }
 
